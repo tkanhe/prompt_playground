@@ -1,6 +1,5 @@
 import streamlit as st
 from langchain_ollama import ChatOllama
-from PIL import Image
 from st_copy_to_clipboard import st_copy_to_clipboard
 import markdown  # To convert markdown text to HTML
 
@@ -85,7 +84,7 @@ with st.sidebar:
             label="Temperature",
             min_value=0.0,
             max_value=1.0,
-            value=0.7,
+            value=0.01,
             step=0.01,
             key="temp1",
             help=f"Temperature for ({model1}): Adjusts the randomness of responses. Lower values (e.g., 0.1) make outputs more focused and deterministic, ideal for precise tasks. Higher values (e.g., 0.8 or 1.0) make responses more diverse and creative. Set to 0 for completely deterministic behavior."
@@ -106,7 +105,7 @@ with st.sidebar:
             label="Temperature",
             min_value=0.0,
             max_value=1.0,
-            value=0.7,
+            value=0.01,
             step=0.01,
             disabled=True,
             key="temp1_disabled",
@@ -138,7 +137,7 @@ with st.sidebar:
             label="Temperature",
             min_value=0.0,
             max_value=1.0,
-            value=0.7,
+            value=0.01,
             step=0.01,
             key="temp2",
             help=f"Temperature for ({model2}): Adjusts the randomness of responses. Lower values (e.g., 0.1) make outputs more focused and deterministic, ideal for precise tasks. Higher values (e.g., 0.8 or 1.0) make responses more diverse and creative. Set to 0 for completely deterministic behavior."
@@ -159,7 +158,7 @@ with st.sidebar:
             label="Temperature",
             min_value=0.0,
             max_value=1.0,
-            value=0.7,
+            value=0.01,
             step=0.01,
             disabled=True,
             key="temp2_disabled",
@@ -191,7 +190,7 @@ with st.sidebar:
             label="Temperature",
             min_value=0.0,
             max_value=1.0,
-            value=0.7,
+            value=0.01,
             step=0.01,
             key="temp3",
             help=f"Temperature for ({model3}): Adjusts the randomness of responses. Lower values (e.g., 0.1) make outputs more focused and deterministic, ideal for precise tasks. Higher values (e.g., 0.8 or 1.0) make responses more diverse and creative. Set to 0 for completely deterministic behavior."
@@ -212,7 +211,7 @@ with st.sidebar:
             label="Temperature",
             min_value=0.0,
             max_value=1.0,
-            value=0.7,
+            value=0.01,
             step=0.01,
             disabled=True,
             key="temp3_disabled",
